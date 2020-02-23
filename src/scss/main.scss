@@ -26,7 +26,7 @@
 // @import "settings/global";
 // @import "settings/typography";
 // @import "settings/spacing";
-// @import "settings/colours";
+@import "settings/colours";
 // @import "settings/mq";
 // @import "settings/zindex";
 // @import "settings/animation";
@@ -94,7 +94,8 @@
 //  Classes for styling any & all UI elements (often combined with the structure of object classes)
 //  Keep to DRY principles  ( [D]ont [R]epeat [Y]ourself )
 //
-// @import "components/test";
+@import "components/brand";
+@import "components/icon";
 
 //============================
 //  $UTILITIES

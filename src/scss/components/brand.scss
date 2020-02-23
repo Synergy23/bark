@@ -1,0 +1,23 @@
+///*----------------------------------*\
+//  #BRAND/LOGO
+//\*----------------------------------*/
+//
+//  Core styles for global brand/logo
+//
+//\*----------------------------------*/
+//
+//  Usage:
+//
+// <a class="" href="" title="">
+//     <svg class="c-brand"><use xlink:href="#logo"></use></svg>
+// </a>
+//
+// SVG to be referenced from /assets/img/icon.svg using the <use xlink> method.
+
+.c-brand {
+
+    width: 101px;
+    height: 28px;
+    fill: $colour-quaternary;
+
+}
