@@ -1,0 +1,110 @@
+@charset "UTF-8";
+
+/* =============================================================================
+   Primary styles
+   ========================================================================== */
+
+/*
+  Contents
+  --------
+	0 	$SETTINGS
+	1 	$TOOLS
+	2 	$GENERIC
+	3 	$ELEMENTS
+	4 	$OBJECTS
+	5 	$COMPONENTS
+	6	$LAYOUT
+	7 	$UTILITIES
+	8 	$STYLEGUIDE
+*/
+
+//============================
+
+//*	$SETTINGS
+//	Preprocessor variables and methods
+//
+// @import "settings/global";
+// @import "settings/typography";
+// @import "settings/spacing";
+// @import "settings/colours";
+// @import "settings/mq";
+// @import "settings/zindex";
+// @import "settings/animation";
+
+//============================
+//*	$TOOLS
+//	Mixins and functions
+//
+// @import "tools/functions";
+// @import "tools/font_size";
+// @import "tools/zindex";
+// @import "tools/mq";
+// @import "tools/position";
+// @import "tools/ratio";
+// @import "tools/object-fit";
+
+//============================
+//*	$GENERIC
+// High Level Styles i.e. CSS Resets
+// Can be employed across multiple sites without the need to edit or adjust
+//
+// @import "generic/reset";
+// @import "generic/list";
+// @import "generic/links";
+// @import "generic/media";
+
+//============================
+//*	$ELEMENTS
+//	Single HTML element selectors without classes
+//
+// @import "elements/page";
+// @import "elements/type";
+// @import "elements/images";
+
+//============================
+//*	$VENDOR
+//	Third-party Library-specific CSS e.g. Flickity
+//
+// @import "vendor/all";
+
+//============================
+//	$OBJECTS
+//  Classes for page structure typically following the OOCSS methodology
+//  The first layer in which we find class-level specificity
+//
+// @import "objects/flex";
+// @import "objects/container";
+// @import "objects/row";
+// @import "objects/grid";
+// @import "objects/media";
+// @import "objects/flex-media";
+// @import "objects/img";
+// @import "objects/main";
+
+//============================
+//	$TYPOGRAPHY
+//  Classes for the display and control of your typography.
+//  These elements sit loosely between objects and components and in turn can be overridden on a piece of UI
+//
+// @import "typography/heading";
+// @import "typography/copy";
+
+//============================
+//	$COMPONENTS
+//  Classes for styling any & all UI elements (often combined with the structure of object classes)
+//  Keep to DRY principles  ( [D]ont [R]epeat [Y]ourself )
+//
+// @import "components/test";
+
+//============================
+//  $UTILITIES
+//	utilities classes in accordance with DRY mentality. Eliminates the need to create specific classes to perform simple tasks
+//  NOTE: Use sparingly
+//
+// @import "utilities/util";
+
+//============================
+//	COMPONENT LIBRARY
+//	Styles specifically coupled to the aesthetic of the Component Library page --- NO relevance to core styles
+//
+// @import "vendor/component-library/page";
