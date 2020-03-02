@@ -18,11 +18,11 @@
 // </div>
 
 .o-media {
-    $self: &;
 
     display: flex;
     flex-flow: row wrap;
     width: 100%;
+    margin-left: -$global-spacing;
 
     &--reverse {
         flex-direction: row-reverse;
@@ -33,11 +33,13 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        padding-left: $global-spacing;
     }
 
     // Define your Image Element
     &__img {
         position: relative;
+        margin: 0 auto;
 
         @include mq($from: tablet-port) {
 

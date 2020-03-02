@@ -1,25 +1,44 @@
 .c-media-img {
 
-    display: grid;
-    grid-template-columns: repeat(10, 1fr);
-    grid-template-rows: repeat(12, 1fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
+    position: relative;
+    width: 305px;
+    height: 315px;
+    margin-bottom: $global-spacing-m;
 
-    @include mq($until: tablet-port) {
-        margin-bottom: $global-spacing-m;
+    @include mq($from: tablet-port) {
+        width: 509px;
+        height: 527px;
+        margin-bottom: 0;
     }
     
-
     &__bottom {
-        grid-area: 2 / 2 / 9 / 8;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+
     }
+
     &__middle {
-        grid-area: 4 / 3 / 11 / 9;
+
+        position: absolute;
+        bottom: 0;
+        right: 0;
+
     }
+
     &__top {
 
-        grid-area: 3 / 3 / 11 / 9;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        max-width: 263px;
+
+        @include mq($from: tablet-port) {
+
+            max-width: 438px;
+
+        }
 
     }
 
