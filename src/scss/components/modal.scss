@@ -32,7 +32,7 @@
         @include _position(relative);
         display: flex;
         flex-flow: row wrap;
-        margin: 0 auto;
+        margin: 10% auto;
         max-width: 90%;
         min-height: 480px;
         background-color: $colour-quinary;
