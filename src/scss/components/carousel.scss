@@ -1,6 +1,6 @@
 .c-carousel {
 
-    max-width: $global-base-width;
+    max-width: 1136px;
     margin: 0 auto;
 
 
@@ -9,7 +9,6 @@
         position: relative;
         background-color: $colour-tertiary;
         width: 100%;
-        max-width: 356px;
         flex: 1;
 
         &:hover {
@@ -140,11 +139,23 @@
         text-shadow: none;
         border: 0 none;
 
+        &--left {
+
+            left: -$global-spacing-l;
+
+        }
+
+        &--right {
+
+            right: -$global-spacing-l;
+
+        }
+
     }
 
     &__bullets {
 
-        // top: -$global-spacing;
+        bottom: -$global-spacing-m;
 
         @include mq($from: tablet-port) {
 
@@ -152,7 +163,19 @@
 
         }
         
-
     }
+
+}
+
+.glide__bullet {
+
+    margin: 0 8px;
+    background-color: $colour-bullet;
+
+}
+
+.glide__bullet--active {
+
+    background-color: $colour-quaternary;
 
 }
