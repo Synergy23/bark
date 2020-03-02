@@ -1,0 +1,124 @@
+.c-footer {
+
+    padding: $global-spacing * 2.5 0 $global-spacing * 1.5;
+
+    @include mq($from: tablet-port) {
+        padding: $global-spacing * 5 0 $global-spacing * 3;
+    }
+
+    &__inner {
+
+        display: flex;
+        flex-direction: column;
+
+        @include mq($from: tablet-port) {
+
+            flex-direction: row;
+
+        }
+
+    }
+
+    &__nav {
+
+        display: flex;
+        flex-grow: 1;
+        flex-direction: column;
+        margin: $global-spacing 0 $global-spacing-m;
+
+        @include mq($from: tablet-port) {
+
+            margin: 0;
+
+        }
+
+    }
+
+    &__link {
+
+        transition: color 0.3s $ease-in-out;
+        font-family: $font-secondary;
+        text-transform: uppercase;
+        @include font-size($size-milli);
+        letter-spacing: 1.84px;
+        padding: 5px 0;
+
+        &:hover,
+        &.is-active {
+
+            color: $colour-quaternary;
+
+        }
+
+    }
+
+    &__left {
+
+        flex: 1 0 auto;
+
+    }
+
+    &__right {
+
+        display: flex;
+        flex-direction: column;
+        flex: 1 0 69%;
+
+    }
+
+    &__row {
+
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 87px;
+
+        @include mq($from: tablet-port) {
+
+            margin-bottom: 109px;
+            flex-direction: row;
+
+        }
+
+    }
+
+    &__modal-btn {
+
+        margin-bottom: $global-spacing;
+
+    }
+
+    &__copyright {
+
+        margin-bottom: 0;
+        @include font-size(14);
+        font-weight: 100;
+
+        @include mq($from: tablet-port) {
+            margin-left: 11%;
+        }
+
+    }
+
+    &__payment {
+
+        display: flex;
+        align-items: flex-start;
+        padding-top: 40px;
+        border-top: 1px solid $colour-septenary;
+        flex-direction: column;
+
+        @include mq($from: tablet-port) {
+
+            flex-direction: row;
+
+        }
+
+    }
+
+    &__modal {
+
+        flex-grow: 2;
+
+    }
+
+}

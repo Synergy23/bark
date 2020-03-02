@@ -1,0 +1,158 @@
+.c-carousel {
+
+    max-width: $global-base-width;
+    margin: 0 auto;
+
+
+    &__item {
+
+        position: relative;
+        background-color: $colour-tertiary;
+        width: 100%;
+        max-width: 356px;
+        flex: 1;
+
+        &:hover {
+
+            .c-carousel__button {
+
+                @include mq($from: tablet-port) {
+
+                    display: block;
+
+                }
+
+            }
+
+        }
+
+    }
+
+    &__content {
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: $global-spacing * 1.5;
+
+    }
+
+    &__title {
+
+        font-weight: $weight-light;
+        font-family: $font-primary;
+        @include font-size($size-delta);
+        margin-bottom: $global-spacing / 2;
+
+    }
+
+    &__image-wrap {
+
+        position: relative;
+
+        &:before,
+        &:after {
+            display: block;
+            content: "";
+            width: 100%;
+        }
+
+        &:before {
+            
+            padding-top: (155 / 178) * 100%;
+        }
+
+        &:after {
+
+            @include _position(absolute, 0, 0, 0, 0, 1);
+            background-color: $colour-quinary;
+            height: 199px;
+
+        }
+
+        > .c-carousel__image {
+            @include _position(absolute, 0, 0, 0, 0, 2);
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            height: 310px;
+        }
+
+    }
+
+    &__button {
+
+
+        @include mq($from: tablet-port) {
+
+            display: none;
+
+        }
+        
+
+    }
+
+    &__price {
+
+        color: $colour-secondary;
+        font-family: $font-secondary;
+        font-weight: $weight-bold;
+        margin-bottom: $global-spacing;
+
+    }
+
+    &__header {
+
+        display: flex;
+        justify-content: center;
+        margin: $global-spacing 0;
+
+        @include mq($from: tablet-port) {
+
+            margin: $global-spacing-m 0;
+
+        }
+
+    }
+
+    &__heading {
+
+        margin-left: $global-spacing / 2;
+
+    }
+
+    &__arrows {
+
+        @include mq($until: tablet-port) {
+
+            display: none;
+
+        }
+
+    }
+
+    &__arrow {
+
+        color: $colour-secondary;
+        box-shadow: none;
+        text-shadow: none;
+        border: 0 none;
+
+    }
+
+    &__bullets {
+
+        // top: -$global-spacing;
+
+        @include mq($from: tablet-port) {
+
+            display: none;
+
+        }
+        
+
+    }
+
+}

@@ -23,43 +23,42 @@
 //*	$SETTINGS
 //	Preprocessor variables and methods
 //
-// @import "settings/global";
-// @import "settings/typography";
-// @import "settings/spacing";
+@import "settings/global";
+@import "settings/typography";
+@import "settings/spacing";
 @import "settings/colours";
-// @import "settings/mq";
-// @import "settings/zindex";
-// @import "settings/animation";
+@import "settings/mq";
+@import "~sass-mq/mq";
+@import "node_modules/@glidejs/glide/src/assets/sass/glide.core";
+@import "node_modules/@glidejs/glide/src/assets/sass/glide.theme";
+@import "settings/zindex";
+@import "settings/animation";
 
 //============================
 //*	$TOOLS
 //	Mixins and functions
 //
 // @import "tools/functions";
-// @import "tools/font_size";
-// @import "tools/zindex";
-// @import "tools/mq";
-// @import "tools/position";
-// @import "tools/ratio";
-// @import "tools/object-fit";
+@import "tools/font_size";
+@import "tools/zindex";
+@import "tools/position";
 
 //============================
 //*	$GENERIC
 // High Level Styles i.e. CSS Resets
 // Can be employed across multiple sites without the need to edit or adjust
 //
-// @import "generic/reset";
-// @import "generic/list";
-// @import "generic/links";
-// @import "generic/media";
+@import "generic/reset";
+@import "generic/list";
+@import "generic/links";
 
 //============================
 //*	$ELEMENTS
 //	Single HTML element selectors without classes
 //
-// @import "elements/page";
-// @import "elements/type";
-// @import "elements/images";
+@import "elements/page";
+@import "elements/type";
+@import "elements/images";
 
 //============================
 //*	$VENDOR
@@ -72,22 +71,18 @@
 //  Classes for page structure typically following the OOCSS methodology
 //  The first layer in which we find class-level specificity
 //
-// @import "objects/flex";
-// @import "objects/container";
-// @import "objects/row";
-// @import "objects/grid";
-// @import "objects/media";
-// @import "objects/flex-media";
-// @import "objects/img";
-// @import "objects/main";
+
+@import "objects/section";
+@import "objects/media";
+@import "objects/wrap";
 
 //============================
 //	$TYPOGRAPHY
 //  Classes for the display and control of your typography.
 //  These elements sit loosely between objects and components and in turn can be overridden on a piece of UI
 //
-// @import "typography/heading";
-// @import "typography/copy";
+@import "typography/heading";
+@import "typography/copy";
 
 //============================
 //	$COMPONENTS
@@ -96,16 +91,22 @@
 //
 @import "components/brand";
 @import "components/icon";
+@import "components/button";
+@import "components/footer";
+@import "components/promo";
+@import "components/social";
+@import "components/payment";
+@import "components/media-img";
+@import "components/hero";
+@import "components/header";
+@import "components/nav";
+@import "components/modal";
+@import "components/form";
+@import "components/carousel";
 
 //============================
 //  $UTILITIES
 //	utilities classes in accordance with DRY mentality. Eliminates the need to create specific classes to perform simple tasks
 //  NOTE: Use sparingly
 //
-// @import "utilities/util";
-
-//============================
-//	COMPONENT LIBRARY
-//	Styles specifically coupled to the aesthetic of the Component Library page --- NO relevance to core styles
-//
-// @import "vendor/component-library/page";
+@import "utilities/util";

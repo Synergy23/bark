@@ -1,0 +1,19 @@
+.u-mb {
+
+    &--s {
+        margin-bottom: $global-spacing-s;
+    }
+
+    &--r {
+        margin-bottom: $global-spacing;
+    }
+
+    &--m {
+        margin-bottom: $global-spacing-m;
+    }
+    
+    &--l {
+        margin-bottom: $global-spacing-l;
+    }
+
+}

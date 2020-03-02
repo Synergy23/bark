@@ -1,0 +1,37 @@
+///*----------------------------------*\
+//  #MEDIA QUERY SETTINGS
+//\*----------------------------------*/
+//
+//  Sets baseline Media Queries which correlate with some of the popular viewports.
+//  Adjust where necessary and add/remove if needed.
+//  Apply mixin from tools/mq
+//
+//\*----------------------------------*/
+//
+// Usage:
+// @include mq($from: tablet-port) { ... };
+
+$mq-breakpoints: (
+    mobile: 320px,
+    mobile-large: 400px,
+    phablet: 480px,
+    phablet-large: 600px,
+    tablet-port: 740px,
+    tablet-land: 980px,
+    lap: 1120px,
+    desk: 1440px,
+    desk-wide: 1800px
+);
+
+// Visual breakpoint top left of the screen
+// $mq-show-breakpoints: (
+//     mobile,
+//     mobile-large,
+//     phablet,
+//     phablet-large,
+//     tablet-port,
+//     tablet-land,
+//     lap,
+//     desk,
+//     desk-wide
+// );

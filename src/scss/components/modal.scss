@@ -1,0 +1,113 @@
+.c-modal {
+
+    display: grid;
+    background-color: rgba($colour-quaternary, 0.6);
+    @include _position(fixed, 0, 0 ,0 , 0);
+    @include z-index(modal);
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s $ease-in-out;
+    overflow: scroll;
+
+
+    &.is-active {
+
+        opacity: 1;
+        pointer-events: all;
+
+        .c-modal__inner {
+
+            transform: translateY(0);
+
+        }
+
+    }
+
+    &__inner {
+
+        @include _position(relative);
+        display: flex;
+        flex-flow: row wrap;
+        margin: 0 auto;
+        max-width: 90%;
+        min-height: 480px;
+        background-color: $colour-quinary;
+        border-radius: 5px;
+        overflow: hidden;
+        transform: translateY(-100vh);
+        transition: transform 0.5s $ease-in-out;
+
+        @include mq($from: tablet-port) {
+
+            max-width: 880px;
+    
+        }
+
+    }
+
+    &__left {
+
+        display: flex;
+        width: 100%;
+        @include _position(relative);
+        background-color: $colour-modal;
+
+        @include mq($from: tablet-port) {
+
+            width: 50%;
+
+        }
+
+    }
+
+    &__image-wrap {
+
+        position: relative;
+        padding: $global-spacing $global-spacing 0;
+        max-width: 182px;
+        margin: 0 auto;
+
+        @include mq($from: tablet-port) {
+
+            max-width: 456px;
+
+        }
+
+    }
+
+    &__image {
+
+        width: 100%;
+        
+    }
+
+    &__right {
+
+        @include _position(relative);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding: $global-spacing;
+
+        @include mq($from: tablet-port) {
+
+            width: 50%;
+            padding: $global-spacing * 2;
+
+        }
+
+    }
+
+    &__close {
+
+        @include _position(absolute, $global-spacing, $global-spacing, null, null, 10);
+
+    }
+
+}

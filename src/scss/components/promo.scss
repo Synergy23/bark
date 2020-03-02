@@ -1,0 +1,47 @@
+.c-promo {
+
+    display: flex;
+    align-content: center;
+    justify-content: center;
+
+    &--bg {
+
+        height: 352px;
+        background-image: url(../assets/pattern-mobile.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+
+        @include mq($from: tablet-port) {
+
+            height: 550px;
+            background-image: url(../assets/pattern-desktop.png);
+
+        }
+
+    }
+
+    &__content {
+
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        text-align: center;
+        max-width: 250px;
+
+    }
+
+    &__heading {
+
+        margin-bottom: $global-spacing * 1.5;
+
+    }
+
+    &__copy {
+
+        @include font-size(14);
+
+    }
+
+}

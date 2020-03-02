@@ -1,0 +1,44 @@
+///*----------------------------------*\
+//  #LISTS
+//\*----------------------------------*/
+//
+// Extends Reset to list elements
+//
+//\*----------------------------------*/
+
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none outside;
+}
+
+ol {
+    list-style: decimal;
+}
+
+li {
+    list-style: inherit;
+}
+
+dl {
+    margin-bottom: 10px;
+    line-height: 1;
+}
+
+dt,
+dd {
+    display: inline-block;
+}
+
+dt {
+    font-weight: normal;
+}
+
+dd {
+    margin: 0;
+    padding: 0 0 0 40px;
+}

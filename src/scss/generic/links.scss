@@ -1,0 +1,14 @@
+///*----------------------------------*\
+//  #LINKS
+//\*----------------------------------*/
+//
+// Extends Reset to normalise links
+//
+//\*----------------------------------*/
+
+a[href^="tel"],
+a[href^="mailto"] {
+    display: inline-flex;
+    max-width: 100%;
+    word-wrap: break-word;
+}

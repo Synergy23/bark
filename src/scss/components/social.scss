@@ -1,0 +1,12 @@
+.c-social {
+
+    display: flex;
+    margin-left: -$global-spacing * 1.5;
+
+    &__item {
+
+        padding-left: $global-spacing * 1.5;
+
+    }
+
+}

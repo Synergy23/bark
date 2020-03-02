@@ -1,0 +1,11 @@
+.o-wrap {
+
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    max-width: $global-base-width;
+    margin: 0 auto;
+    padding: 0 $global-spacing;
+
+}

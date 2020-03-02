@@ -1,0 +1,89 @@
+.c-header {
+
+    position: absolute;
+    @include z-index(header);
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: $global-spacing * 1.7 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.2) 0%, rgba(255,255,255,0) 100%);
+
+    &__wrap {
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+
+    &__logo {
+
+        @include _position(relative);
+        display: block;
+        @include z-index(logo);
+
+    }
+
+    &__toggle {
+
+        @include _position(relative);
+        @include z-index(hamburger);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 48px;
+        height: 48px;
+        background-color: $colour-secondary;
+        border-radius: 50%;
+        padding: $global-spacing-s;
+
+        @include mq($from: tablet-port) {
+
+            display: none;
+
+        }
+
+        &.is-active {
+
+            .c-header__toggle-line--top {
+
+                top: 20px;
+                transform: rotate(45deg);
+                    
+            }
+
+            .c-header__toggle-line--bottom {
+
+                width: 24px;
+                top: 20px;
+                transform: rotate(-45deg);
+
+            }
+
+        }
+
+    }
+
+    &__toggle-line {
+
+        display: block;
+        height: 2px;
+        background-color: $colour-tertiary;
+        position: absolute;
+        left: 10px;
+        transition: width 0.3s $ease-in-out, transform 0.3s $ease-in-out;
+
+        &--top {
+            top: 20px;
+            width: 24px;
+        }
+
+        &--bottom {
+            top: 27px;
+            width: 16px;
+        }
+
+    }
+
+}

@@ -1,0 +1,42 @@
+.o-section {
+
+    position: relative;
+    padding: $global-spacing 0;
+
+    &--medium {
+
+        padding: $global-spacing-s 0;
+
+        @include mq($from: tablet-port) {
+
+            padding: $global-spacing-m 0;
+
+        }
+
+    }
+
+    &--large {
+
+        padding: $global-spacing-m 0;
+
+        @include mq($from: tablet-port) {
+
+            padding: $global-spacing-l 0;
+
+        }
+
+    }
+
+    &--xlarge {
+
+        padding: $global-spacing * 2.5 0;
+
+        @include mq($from: tablet-port) {
+
+            padding: $global-spacing * 5 0;
+
+        }
+
+    }
+
+}

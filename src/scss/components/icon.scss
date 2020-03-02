@@ -8,4 +8,75 @@
 
     }
 
+    &--payment {
+
+        width: 38px;
+        height: 26px;
+
+        @include mq($from: tablet-port) {
+
+            width: 43px;
+            height: 30px;
+
+        }
+
+    }
+
+    &--paw {
+
+        width: 29px;
+        height: 28px;
+        fill: $colour-secondary;
+        align-self: center;
+        margin-bottom: 24px;
+
+    }
+
+    &--social {
+
+        &-fb {
+            width: 10px;
+            height: 17px;
+        }
+
+        &-insta {
+            width: 16px;
+            height: 16px;
+        }
+
+        &-tw {
+            width: 19px;
+            height: 16px;
+        }
+
+        &-yt {
+            width: 22px;
+            height: 15px;
+        }
+
+    }
+
+    &--blob {
+
+        width: 100%;
+        height: 100%;
+        fill: $colour-secondary;
+
+    }
+
+    &--circle {
+
+        width: 100%;
+        height: 100%;
+        fill: $colour-primary;
+    }
+
+    &--prev,
+    &--next {
+
+        width: 18px;
+        height: 18px;
+
+    }
+
 }

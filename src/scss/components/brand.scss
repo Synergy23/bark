@@ -18,6 +18,17 @@
 
     width: 101px;
     height: 28px;
-    fill: $colour-quaternary;
+
+    &--header {
+
+        fill: $colour-quinary;
+
+    }
+
+    &--footer {
+
+         fill: $colour-quaternary;
+
+    }
 
 }

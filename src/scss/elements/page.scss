@@ -1,0 +1,48 @@
+///*----------------------------------*\
+//  #PAGE
+//\*----------------------------------*/
+//
+// Page-level styling (e.g. HTML and BODY elements).
+//
+//\*----------------------------------*/
+
+html {
+    height: 100%;
+    overflow-y: scroll;
+    color: $colour-font;
+    font-size: 62.5%;
+    font-weight: normal;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+body {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    font-family: $font-primary;
+    @include font-size($base-font-size, $base-line-height);
+    -webkit-font-smoothing: antialiased;
+
+    &:after {
+
+        content: "";
+        display: block;
+        @include _position(fixed, 0, 0 ,0 , 0, 1);
+        background-color: rgba($colour-quaternary, 0.6);
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s $ease-in-out;
+
+    }
+
+    &.is-active {
+
+        &:after {
+            opacity: 1;
+            pointer-events: all;
+        }
+    }
+}

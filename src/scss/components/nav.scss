@@ -1,0 +1,83 @@
+.c-nav {
+
+    @include z-index(navigation);
+    display: flex;
+    margin-left: auto;
+
+    @include mq($until: tablet-port) {
+
+        @include _position(fixed, 0, 0, null, 0);
+        flex-direction: column;
+        background-color: $colour-secondary;
+        border-bottom-left-radius: 50% 15%;
+        border-bottom-right-radius: 50% 15%;
+        text-align: center;
+        padding: $global-spacing * 6 0;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s $ease-in-out;
+
+    }
+
+    &.is-active {
+
+        opacity: 1;
+        pointer-events: all;
+
+    }
+
+    &__link {
+
+        @include _position(relative, null, null, null, null);
+        display: inline-block;
+        margin-bottom: $global-spacing;
+        @include font-size(30);
+        color: $colour-quinary;
+        font-family: $font-primary;
+
+        &:hover,
+        &.is-active {
+    
+            color: rgba($colour-quinary, 0.6);
+
+        }
+
+        @include mq($from: tablet-port) {
+
+            @include font-size($size-milli);
+            text-transform: uppercase;
+            font-weight: $weight-medium;
+            font-family: $font-secondary;
+            margin: 0 $global-spacing / 2;
+
+            &:after {
+
+                content: "";
+                display: block;
+                width: 100%;
+                height: 2px;
+                background-color: $colour-secondary;
+                opacity: 0;
+                @include _position(absolute, null, null, -10px, 0);
+                transition: opacity 0.3s $ease-in-out;
+    
+            }
+    
+            &:hover,
+            &.is-active {
+
+                color: $colour-quinary;
+    
+                &:after {
+    
+                    opacity: 1;
+    
+                }
+    
+            }
+
+        }
+
+    }
+
+}

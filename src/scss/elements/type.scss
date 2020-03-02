@@ -1,0 +1,27 @@
+///*----------------------------------*\
+//  #TYPE
+//\*----------------------------------*/
+//
+// Basic Typography styles
+//
+//\*----------------------------------*/
+
+p,
+li {
+    margin: 0 0 $global-spacing-s;
+    letter-spacing: 0.020em;
+}
+
+a {
+    color: inherit;
+
+    &,
+    &:active,
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+small {
+    @include font-size($size-micro);
+}

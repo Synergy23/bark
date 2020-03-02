@@ -1,0 +1,105 @@
+$properties: (
+    primary: (
+        background-color: $colour-primary,
+        background-color-active: $colour-quinary,
+        border-width: 2px,
+        border-color: $colour-primary,
+        border-color-active: $colour-primary,
+        color: $colour-quinary,
+        color-active: $colour-primary,
+        font-family: $font-secondary
+    ),
+    secondary: (
+        background-color: $colour-secondary,
+        background-color-active: $colour-quinary,
+        border-width: 2px,
+        border-color: $colour-secondary,
+        border-color-active: $colour-secondary,
+        color: $colour-quinary,
+        color-active: $colour-secondary,
+        font-family: $font-secondary
+    ),
+    tertiary: (
+        background-color: transparent,
+        background-color-active: transparent,
+        border-width: 0,
+        border-color: transparent,
+        border-color-active: transparent,
+        color: $colour-secondary,
+        color-active: $colour-secondary,
+        font-family: $font-secondary
+    )
+);
+
+.c-button {
+
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 15px 46px;
+    border: none;
+    border-radius: 29px;
+    font: inherit;
+    @include font-size($size-milli);
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1.84px;
+    white-space: nowrap;
+    cursor: pointer;
+
+    @each $class, $property in $properties {
+        $bg-color: map-get($property, background-color);
+        $bg-color-active: map-get($property, background-color-active);
+        $border-width: map-get($property, border-width);
+        $border-color: map-get($property, border-color);
+        $border-color-active: map-get($property, border-color-active);
+        $text-color: map-get($property, color);
+        $text-color-active: map-get($property, color-active);
+        $font-family: map-get($property, font-family);
+
+        &--#{$class} {
+            background-color: $bg-color;
+            background-image: none;
+            background-repeat: repeat;
+            background-position: 0 0;
+
+            @if $border-width >= 1 {
+                border-width: $border-width;
+                border-style: solid;
+                border-color: $border-color;
+            }
+
+            color: $text-color;
+            font-family: $font-family;
+
+            &:hover {
+                border-color: $border-color-active;
+                color: $text-color-active;
+                background-color: $bg-color-active;
+            }
+        }
+    }
+
+    &--tertiary {
+
+        padding: 0;
+        @include font-size(24);
+        font-family: $font-primary;
+
+    }
+
+    &--lowercase {
+
+        text-transform: lowercase;
+
+    }
+
+    &--casereset {
+
+        text-transform: none;
+
+    }
+
+}

@@ -1,0 +1,91 @@
+.c-hero {
+
+    background-color: $colour-primary;
+    position: relative;
+
+    border-bottom-left-radius: 50% 5%;
+    border-bottom-right-radius: 50% 5%;
+    overflow: hidden;
+
+    @include mq($from: tablet-port) {
+
+        border-bottom-left-radius: 50% 20%;
+        border-bottom-right-radius: 50% 20%;
+
+    }
+
+    
+
+    &__heading {
+
+        margin-bottom: $global-spacing * 2;
+
+    }
+
+    &__inner {
+
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        margin-top: 182px;
+
+        @include mq($from: lap) {
+
+            flex-direction: row;
+            margin-top: 90px;
+
+        }
+
+    }
+
+    &__image-wrap {
+
+        position: relative;
+        width: 100%;
+        max-width: 641px;
+        align-self: flex-end;
+
+        @include mq($until: lap) {
+
+            justify-self: flex-end;
+            max-width: 363px;
+            left: $global-spacing * 2;
+
+        }
+
+        &:before {
+            display: block;
+            content: "";
+            width: 100%;
+            padding-top: (739 / 641) * 100%;
+        }
+
+        > .c-hero__image {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+        }
+
+    }
+
+
+    &__content {
+
+        text-align: center;
+        max-width: 432px;
+        margin-bottom: $global-spacing-m;
+
+        @include mq($from: lap) {
+
+            margin-bottom: 0;
+
+        }
+
+    }
+
+}
